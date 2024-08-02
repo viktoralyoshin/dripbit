@@ -1,7 +1,14 @@
 "use client";
 
 import Carousel from "@/components/ui/Carousel";
-import { Divider, Spacer, Chip, Input } from "@nextui-org/react";
+import {
+  Divider,
+  Spacer,
+  Chip,
+  Input,
+  Accordion,
+  AccordionItem,
+} from "@nextui-org/react";
 import { Search, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -46,7 +53,7 @@ export default function Home() {
             size="md"
             className="max-w-[800px] px-4"
             placeholder="Type to search"
-            startContent={<Search size={18} className="text-white/80"/>}
+            startContent={<Search size={18} className="text-white/80" />}
           />
         </motion.div>
       </div>
@@ -54,12 +61,43 @@ export default function Home() {
         <div className="flex flex-col">
           <h1 className="text-[36px] font-semibold">Popular beats</h1>
           <p className="text-default-500">
-            The most popular bits in recent times
+            The most popular beats in recent times
           </p>
           <Spacer y={2} />
           <Divider />
         </div>
         <Carousel />
+      </div>
+      <div className="flex flex-col gap-1">
+        <h1 className="text-[36px] font-semibold">FAQ</h1>
+        <Accordion>
+          <AccordionItem
+            key="1"
+            aria-label="What is the Beats Marketplace?"
+            title="What is the Beats Marketplace?"
+          >
+            The Beats Marketplace is an online platform where music producers
+            and artists can buy, sell, and license high-quality beats and
+            instrumentals for their projects.
+          </AccordionItem>
+          <AccordionItem
+            key="2"
+            aria-label="How do I purchase a beat?"
+            title="How do I purchase a beat?"
+          >
+            To purchase a beat, browse our listings, select the beat you want,
+            and click "Buy Now." Follow the prompts to complete your payment
+            securely.
+          </AccordionItem>
+          <AccordionItem
+            key="3"
+            aria-label="Can I listen to a preview of the beats?"
+            title="Can I listen to a preview of the beats?"
+          >
+            Yes! Each beat listing includes a preview audio player so you can
+            listen before making a purchase.
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   );

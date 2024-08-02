@@ -1,4 +1,6 @@
+import Footer from "@/components/ui/Footer";
 import UiNavbar from "@/components/ui/Navbar";
+import { Divider, Spacer } from "@nextui-org/react";
 
 export default function MainLayout({
   children,
@@ -11,6 +13,9 @@ export default function MainLayout({
       <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
         {children}
       </main>
+      <Spacer y={20}/>
+      <Divider/>
+      <Footer />
     </div>
   );
 }
