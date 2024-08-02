@@ -43,9 +43,9 @@ export default function Carousel() {
             <CardHeader className="absolute z-10 top-1 left-2">
               <Button isIconOnly color="default" variant="light" onClick={changeLiked}>
                 {isLiked ? (
-                  <Heart size={20} fill="white" />
+                  <Heart size={24} fill="white" />
                 ) : (
-                  <Heart size={20} />
+                  <Heart size={24} />
                 )}
               </Button>
             </CardHeader>
