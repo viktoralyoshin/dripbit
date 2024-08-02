@@ -63,7 +63,6 @@ export default function UiNavbar() {
         />
         <NavbarBrand>
           <Link color="foreground" href="/" className="flex gap-2 items-center">
-            <Image src="logo.png" alt="alt" width={40} height={40}/>
             <p className="font-semibold text-2xl text-inherit">Dripbit</p>
           </Link>
         </NavbarBrand>
